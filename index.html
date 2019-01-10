@@ -9,7 +9,7 @@ layout: default
     {% for mod in cat.items %}
       {% assign name = mod.path | split:"/" | last | split:"." | first %}
   <dt><a href="{{ mod.url }}">{{ name }}</a>{% if mod.core %} (core){% endif %}</dt>
-    <dd>{{ mod.excerpt }}</dd>
+    <dd>{{ mod.excerpt | remove: "<p>" | remove: "</p>" }}</dd>
     {% endfor %}
 </dl>
   {% endfor %}
