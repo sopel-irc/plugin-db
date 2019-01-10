@@ -131,6 +131,26 @@ dt {
   font-weight: bold;
 }
 
+dl.module-list {
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: 2em;
+
+  dt {
+    flex-basis: 10%;
+    padding: 2px 4px;
+    margin-right: 1em;
+    color: #777;
+    text-align: right;
+  }
+  dd {
+    flex-basis: 80%;
+    flex-grow: 1;
+    margin: 0;
+    padding: 2px 4px;
+  }
+}
+
 ul li {
   list-style-image:url('../images/bullet.png');
 }
