@@ -1,6 +1,9 @@
 title: sopel-module list
+description: A simple site to list user-submitted Sopel modules. Concept/WIP phase.
 
 theme: jekyll-theme-hacker
+
+repository: sopel-irc/sopel
 
 github:
   is_project_page: false

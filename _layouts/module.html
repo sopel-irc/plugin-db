@@ -7,7 +7,10 @@ layout: default
   <h1>{{ name }}</h1>
 
   {% if page.core %}
-    <p>Included with Sopel.</p>
+    <p>
+      Included with Sopel.
+      <a href="https://github.com/sopel-irc/sopel/blob/{{ site.github.latest_release.tag_name }}/sopel/modules/{{ name }}.py">View source</a>
+    </p>
   {% elsif page.author %}
     <p class="module-author">by {{ page.author }}</p>
   {% endif %}
