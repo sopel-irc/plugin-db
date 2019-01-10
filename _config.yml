@@ -4,3 +4,15 @@ theme: jekyll-theme-hacker
 
 github:
   is_project_page: false
+
+collections:
+  modules:
+    output: true
+    permalink: /module/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "modules"
+    values:
+      layout: module

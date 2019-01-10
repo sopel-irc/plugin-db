@@ -1,0 +1,33 @@
+---
+layout: default
+---
+{% assign name = page.path | split:"/" | last | split:"." | first %}
+<article class="module">
+
+  <h1>{{ name }}</h1>
+
+  {% if page.author %}
+    <p class="module-author">by {{ page.author }}</p>
+  {% endif %}
+
+  <p>
+    {% if page.pypi %}
+      {% assign package = page.pypi %}
+    {% else %}
+      {% capture package %}sopel-modules.{{ name }}{% endcapture %}
+    {% endif %}
+    {% if page.download %}
+      {% assign download = page.download %}
+    {% else %}
+      {% assign download = 'https://pypi.org/project/' | append: package | append: '/' %}
+    {% endif %}
+    <a href="{{ download }}">{% if page.download %}Download{% else %}PyPI{% endif %}</a>
+    |
+    <a href="{{ page.link }}">Module homepage</a>
+  </p>
+
+  <div>
+    {{ content }}
+  </div>
+  
+</article>
