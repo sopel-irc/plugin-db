@@ -66,8 +66,8 @@ header h1 {
   -webkit-font-smoothing: antialiased;
 }
 
-header h1:before {
-  content: "$ ";
+header h1:first-letter, /* bloody IE */
+header h1::first-letter {
   font-size: 32px;
 }
 

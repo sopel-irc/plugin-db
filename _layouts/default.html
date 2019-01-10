@@ -1,6 +1,7 @@
 {% if page.collection == "modules" %}
   {% assign name = page.path | split:"/" | last | split:"." | first %}
 {% endif %}
+{% capture command %}sopel-module {% if name %}show {{ name }}{% else %}list{% endif %}{% endcapture %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -8,13 +9,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <title>{% if name %}{{ name }} | {% endif %}$ {{ site.title }}</title>
+    <title>$ {{ command }}</title>
   </head>
 
   <body>
     <header>
       <div class="container">
-        <h1>{{ site.title }}</h1>
+        <h1>$ {{ command }}</h1>
         <h2>{{ site.description }}</h2>
       </div>
     </header>
