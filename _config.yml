@@ -8,7 +8,7 @@ github:
 collections:
   modules:
     output: true
-    permalink: /module/:name/
+    permalink: /info/:name/
 
 defaults:
   - scope:
