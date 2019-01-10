@@ -1,13 +1,12 @@
-# List of modules
-
-  {% assign cats = site.modules | group_by: 'category' %}
-  {% for cat in cats %}
-## {{ cat.name | capitalize }}
+<h1>List of modules</h1>
+{% assign cats = site.modules | group_by: 'category' %}
+{% for cat in cats %}
+<h2>{{ cat.name | capitalize }}</h2>
 <dl class="module-list">
     {% for mod in cat.items %}
       {% assign name = mod.path | split:"/" | last | split:"." | first %}
   <dt><a href="{{ mod.url }}">{{ name }}</a>{% if mod.core %} (core){% endif %}</dt>
-    <dd>{{ mod.excerpt | strip_html }}</dd>
+    <dd>{{ mod.excerpt }}</dd>
     {% endfor %}
 </dl>
   {% endfor %}
