@@ -6,10 +6,13 @@ layout: default
 
   <h1>{{ name }}</h1>
 
-  {% if page.author %}
+  {% if page.core %}
+    <p>Included with Sopel.</p>
+  {% elsif page.author %}
     <p class="module-author">by {{ page.author }}</p>
   {% endif %}
 
+  {% unless page.core %}
   <p>
     {% if page.pypi %}
       {% assign package = page.pypi %}
@@ -25,6 +28,7 @@ layout: default
     |
     <a href="{{ page.link }}">Module homepage</a>
   </p>
+  {% endunless %}
 
   <div>
     {{ content }}
