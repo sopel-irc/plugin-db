@@ -4,7 +4,7 @@ layout: default
 {% assign name = page.path | split:"/" | last | split:"." | first %}
 <article class="module">
 
-  <h1>{{ name }}</h1>
+  <h1>{{ name }}{% if page.core %}.py{% endif %}</h1>
 
   {% if page.core %}
     <p>
