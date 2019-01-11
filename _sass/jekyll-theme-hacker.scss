@@ -4,10 +4,14 @@
 $body-background: $cod-grey !default;
 $body-foreground: $gallery !default;
 $header: $conifer !default;
+$footer: $header !default;
 $blockquote-color: $silver-chalice !default;
 $blockquote-border: $dove-grey !default;
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   background: $body-background url("../images/bkg.png") 0 0;
@@ -221,6 +225,21 @@ hr {
   border: 0;
   border-bottom: 1px dashed #b5e853;
   color: #b5e853;
+}
+
+/* Footer
+*/
+
+footer {
+  color: #666;
+  flex: 1;
+  background: rgba(0, 0, 0, 0.1);
+  border-top: 1px dashed $footer;
+  padding: 1em 0;
+  margin: 40px 0 0 0;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+             0 0 5px rgba(181, 232, 83, 0.1),
+             0 0 10px rgba(181, 232, 83, 0.1);
 }
 
 /* Buttons
