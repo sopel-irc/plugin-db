@@ -23,8 +23,8 @@
     <div class="container">
       <section id="main_content">
         {{ content }}
+        {% if page.url != '/' %}<nav><a class="btn" href="/">Back to list</a></nav>{% endif %}
       </section>
-      {% if page.url != '/' %}<nav><a class="btn" href="/">Back to list</a></nav>{% endif %}
     </div>
 
     <footer>
