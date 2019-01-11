@@ -15,7 +15,7 @@
   <body>
     <header>
       <div class="container">
-        <h1>$ {{ command }}</h1>
+        <h1>{% if page.url != '/' %}<a href='/'>{% endif %}$ {{ command }}{% if page.url != '/' %}</a>{% endif %}</h1>
         <h2>{{ site.description }}</h2>
       </div>
     </header>
