@@ -24,11 +24,11 @@
       <section id="main_content">
         {{ content }}
       </section>
+      {% if page.url != '/' %}<nav><a href="/">Back to list</a></nav>{% endif %}
     </div>
 
     <footer>
       <div class="container">
-        {% if page.url != '/' %}<nav><a href="/">Back to list</a></nav>{% endif %}
         <p>The Sopel Module Database is licensed under the TBD License.</p>
       </div>
     </footer>
