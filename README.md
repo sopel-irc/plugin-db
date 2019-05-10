@@ -1,5 +1,5 @@
-# module-db
-A simple site to list user-submitted Sopel modules. Concept/WIP phase.
+# plugin-db
+A simple site to list user-submitted Sopel plugins. Concept/WIP phase.
 
 ## Preview
 The `prototype` branch is running on Netlify: https://sopel-moddb-prototype.netlify.com/

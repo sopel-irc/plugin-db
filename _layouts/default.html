@@ -1,7 +1,7 @@
-{% if page.collection == "modules" %}
+{% if page.collection == "plugins" %}
   {% assign name = page.path | split:"/" | last | split:"." | first %}
 {% endif %}
-{% capture command %}sopel-module {% if name %}show {{ name }}{% else %}list{% endif %}{% endcapture %}
+{% capture command %}sopel-plugins {% if name %}show {{ name }}{% else %}list{% endif %}{% endcapture %}
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
@@ -29,7 +29,7 @@
 
     <footer>
       <div class="container">
-        <p>The Sopel Module Database is licensed under the TBD License.</p>
+        <p>The Sopel Plugin Database is licensed under the TBD License.</p>
       </div>
     </footer>
 

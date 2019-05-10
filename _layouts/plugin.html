@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign name = page.path | split:"/" | last | split:"." | first %}
-<article class="module">
+<article class="plugin">
 
   <h1>{{ name }}{% if page.core %}.py{% endif %}</h1>
 
@@ -12,7 +12,7 @@ layout: default
       <a href="https://github.com/sopel-irc/sopel/blob/{{ site.github.latest_release.tag_name }}/sopel/modules/{{ name }}.py">View source</a>
     </p>
   {% elsif page.author %}
-    <p class="module-author">by {{ page.author }}</p>
+    <p class="plugin-author">by {{ page.author }}</p>
   {% endif %}
 
   {% unless page.core %}
@@ -29,7 +29,7 @@ layout: default
     {% endif %}
     <a href="{{ download }}">{% if page.download %}Download{% else %}PyPI{% endif %}</a>
     |
-    <a href="{{ page.link }}">Module homepage</a>
+    <a href="{{ page.link }}">Plugin homepage</a>
   </p>
   {% endunless %}
 
