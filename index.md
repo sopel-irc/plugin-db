@@ -1,3 +1,8 @@
-This initiative is still in the planning phase, currently slated to launch with Sopel 7.
+This initiative is still in the planning and prototyping phase.
 
-While you wait, why not familiarize yourself with [Sopel](https://sopel.chat/)?
+Feel free to familiarize yourself with [Sopel](https://sopel.chat/) in
+the mean time. You can search for plugins [on GitHub][] or [on PyPI][]
+until we're ready to launch this directory.
+
+[on GitHub]: https://github.com/search?l=Python&q=sopel&type=Repositories
+[on PyPI]: https://pypi.org/search/?q=sopel
