@@ -27,9 +27,14 @@ layout: default
     {% else %}
       {% assign download = 'https://pypi.org/project/' | append: package | append: '/' %}
     {% endif %}
+    {% if page.link %}
+      {% assign link = page.link %}
+    {% else %}
+      {% capture link %}https://github.com/sopel-irc/sopel-{{ name }}{% endcapture %}
+    {% endif %}
     <a href="{{ download }}">{% if page.download %}Download{% else %}PyPI{% endif %}</a>
     |
-    <a href="{{ page.link }}">Plugin homepage</a>
+    <a href="{{ link }}">Plugin homepage</a>
   </p>
   {% endunless %}
 
