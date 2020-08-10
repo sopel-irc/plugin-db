@@ -11,8 +11,15 @@ layout: default
       Included with Sopel.
       <a href="https://github.com/sopel-irc/sopel/blob/{{ site.github.latest_release.tag_name }}/sopel/modules/{{ name }}.py">View source</a>
     </p>
-  {% elsif page.author %}
-    <p class="plugin-author">by {{ page.author }}</p>
+  {% else %}
+    {% if page.author %}
+      {% assign author = page.author %}
+    {% elsif page.official %}
+      {% capture author %}Sopel IRC Contributors{% endcapture %}
+    {% endif %}
+    {% if author %}
+      <p class="plugin-author">by {{ author }}</p>
+    {% endif %}
   {% endif %}
 
   {% unless page.core %}
@@ -29,12 +36,14 @@ layout: default
     {% endif %}
     {% if page.link %}
       {% assign link = page.link %}
-    {% else %}
+    {% elsif page.official %}
       {% capture link %}https://github.com/sopel-irc/sopel-{{ name }}{% endcapture %}
     {% endif %}
     <a href="{{ download }}">{% if page.download %}Download{% else %}PyPI{% endif %}</a>
+    {% if link %}
     |
     <a href="{{ link }}">Plugin homepage</a>
+    {% endif %}
   </p>
   {% endunless %}
 
